@@ -12,6 +12,13 @@
 		D22B12E6279F5A82004ECF75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22B12E4279F5A82004ECF75 /* Main.storyboard */; };
 		D22B12E8279F5A84004ECF75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22B12E7279F5A84004ECF75 /* Assets.xcassets */; };
 		D22B12EB279F5A84004ECF75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22B12E9279F5A84004ECF75 /* LaunchScreen.storyboard */; };
+		D22B12F9279F6323004ECF75 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B12F8279F6323004ECF75 /* Person.swift */; };
+		D22B12FB279F63E4004ECF75 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B12FA279F63E4004ECF75 /* Group.swift */; };
+		D22B1303279F64F9004ECF75 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B1302279F64F9004ECF75 /* PersonController.swift */; };
+		D22B1305279F6503004ECF75 /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B1304279F6503004ECF75 /* GroupController.swift */; };
+		D22B1307279F651A004ECF75 /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B1306279F651A004ECF75 /* PersonTableViewController.swift */; };
+		D22B1309279F6523004ECF75 /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B1308279F6523004ECF75 /* GroupTableViewController.swift */; };
+		D22B130B279F6536004ECF75 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B130A279F6536004ECF75 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		D22B12E7279F5A84004ECF75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D22B12EA279F5A84004ECF75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D22B12EC279F5A84004ECF75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D22B12F8279F6323004ECF75 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D22B12FA279F63E4004ECF75 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		D22B1302279F64F9004ECF75 /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		D22B1304279F6503004ECF75 /* GroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
+		D22B1306279F651A004ECF75 /* PersonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewController.swift; sourceTree = "<group>"; };
+		D22B1308279F6523004ECF75 /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
+		D22B130A279F6536004ECF75 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +108,8 @@
 		D22B12F5279F5FBA004ECF75 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D22B12F8279F6323004ECF75 /* Person.swift */,
+				D22B12FA279F63E4004ECF75 /* Group.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,6 +117,9 @@
 		D22B12F6279F5FC1004ECF75 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D22B1306279F651A004ECF75 /* PersonTableViewController.swift */,
+				D22B1308279F6523004ECF75 /* GroupTableViewController.swift */,
+				D22B130A279F6536004ECF75 /* DetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -108,6 +127,8 @@
 		D22B12F7279F5FCD004ECF75 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D22B1302279F64F9004ECF75 /* PersonController.swift */,
+				D22B1304279F6503004ECF75 /* GroupController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -183,8 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D22B130B279F6536004ECF75 /* DetailViewController.swift in Sources */,
 				D22B12DF279F5A82004ECF75 /* AppDelegate.swift in Sources */,
+				D22B12F9279F6323004ECF75 /* Person.swift in Sources */,
 				D22B12E1279F5A82004ECF75 /* SceneDelegate.swift in Sources */,
+				D22B1303279F64F9004ECF75 /* PersonController.swift in Sources */,
+				D22B1307279F651A004ECF75 /* PersonTableViewController.swift in Sources */,
+				D22B1309279F6523004ECF75 /* GroupTableViewController.swift in Sources */,
+				D22B12FB279F63E4004ECF75 /* Group.swift in Sources */,
+				D22B1305279F6503004ECF75 /* GroupController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
