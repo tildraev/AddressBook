@@ -54,8 +54,10 @@
 		D22B12DD279F5A82004ECF75 /* Address Book */ = {
 			isa = PBXGroup;
 			children = (
+				D22B12F5279F5FBA004ECF75 /* Models */,
+				D22B12F4279F5FB7004ECF75 /* Views */,
+				D22B12F3279F5FA9004ECF75 /* Controllers */,
 				D22B12F2279F5A8B004ECF75 /* Resources */,
-				D22B12E4279F5A82004ECF75 /* Main.storyboard */,
 			);
 			path = "Address Book";
 			sourceTree = "<group>";
@@ -70,6 +72,44 @@
 				D22B12EC279F5A84004ECF75 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D22B12F3279F5FA9004ECF75 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D22B12F7279F5FCD004ECF75 /* Model Controllers */,
+				D22B12F6279F5FC1004ECF75 /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D22B12F4279F5FB7004ECF75 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D22B12E4279F5A82004ECF75 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D22B12F5279F5FBA004ECF75 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D22B12F6279F5FC1004ECF75 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D22B12F7279F5FCD004ECF75 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
