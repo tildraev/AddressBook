@@ -11,7 +11,7 @@
         <!--Groups-->
         <scene sceneID="V8L-0e-bnO">
             <objects>
-                <tableViewController id="gmu-xC-KmQ" sceneMemberID="viewController">
+                <tableViewController id="gmu-xC-KmQ" customClass="GroupTableViewController" customModule="Address_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bTI-DT-A7B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,13 +53,12 @@
                     <navigationItem key="navigationItem" title="Groups" id="0qt-wp-eDZ">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="beB-iC-SAA">
                             <connections>
-                                <action selector="createGroupButtonTapped:" destination="qAp-uY-uOl" id="un9-s6-Uk7"/>
+                                <action selector="addGroupButtonTapped:" destination="gmu-xC-KmQ" id="Vmi-Pp-iqM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDq-az-603" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="qAp-uY-uOl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="305" y="114"/>
         </scene>
@@ -119,7 +118,7 @@
                     <navigationItem key="navigationItem" id="XoR-4B-U4Q">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="jEw-U5-hbM">
                             <connections>
-                                <segue destination="BnW-0r-PQp" kind="show" id="QQI-J7-wGf"/>
+                                <segue destination="BnW-0r-PQp" kind="show" identifier="toPersonVC" id="QQI-J7-wGf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -162,7 +161,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ska-6X-Sjd"/>
+        <segue reference="QQI-J7-wGf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

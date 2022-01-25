@@ -19,9 +19,10 @@ class GroupTableViewController: UITableViewController {
     
     // MARK: - IBActions
     
-    @IBAction func createGroupButtonTapped(_ sender: Any) {
+    @IBAction func addGroupButtonTapped(_ sender: Any) {
+        GroupController.sharedInstance.createGroup()
+        tableView.reloadData()
     }
-    
     
     // MARK: - Table view data source
     
