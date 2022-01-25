@@ -93,6 +93,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uau-ny-0Is">
                                                     <rect key="frame" x="345" y="0.0" width="51" height="30"/>
+                                                    <connections>
+                                                        <action selector="filterFavoritesToggled:" destination="TO0-oc-ZRy" eventType="valueChanged" id="uvU-4b-1vh"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </stackView>
@@ -116,29 +119,43 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" id="xkX-Dr-HBx">
-                                <rect key="frame" x="0.0" y="129.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" id="xkX-Dr-HBx" customClass="PersonTableViewCell" customModule="Address_Book" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="129.5" width="414" height="41.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xkX-Dr-HBx" id="JGi-Y7-FMp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dF-RE-Y8d">
-                                            <rect key="frame" x="28" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cws-cr-FZd">
-                                            <rect key="frame" x="344" y="7" width="47" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="star" catalog="system" title=""/>
-                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u7Q-er-Cjj">
+                                            <rect key="frame" x="10" y="5" width="394" height="31.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dF-RE-Y8d">
+                                                    <rect key="frame" x="0.0" y="0.0" width="337" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cws-cr-FZd">
+                                                    <rect key="frame" x="347" y="0.0" width="47" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="star" catalog="system" title=""/>
+                                                    <connections>
+                                                        <action selector="isFavoriteButtonTapped:" destination="xkX-Dr-HBx" eventType="touchUpInside" id="b4c-tO-2Bq"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="u7Q-er-Cjj" firstAttribute="leading" secondItem="JGi-Y7-FMp" secondAttribute="leading" constant="10" id="2yM-PL-kQC"/>
+                                        <constraint firstAttribute="bottom" secondItem="u7Q-er-Cjj" secondAttribute="bottom" constant="5" id="6CV-gK-BZT"/>
+                                        <constraint firstAttribute="trailing" secondItem="u7Q-er-Cjj" secondAttribute="trailing" constant="10" id="ANj-vA-5aQ"/>
+                                        <constraint firstItem="u7Q-er-Cjj" firstAttribute="top" secondItem="JGi-Y7-FMp" secondAttribute="top" constant="5" id="h78-63-dXA"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="isFavoriteButton" destination="cws-cr-FZd" id="uM2-xR-pwH"/>
+                                    <outlet property="nameLabel" destination="1dF-RE-Y8d" id="R3X-nt-vYP"/>
                                     <segue destination="BnW-0r-PQp" kind="show" identifier="toDetailVC" id="Ska-6X-Sjd"/>
                                 </connections>
                             </tableViewCell>
@@ -157,6 +174,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="filterFavoritesSwitch" destination="uau-ny-0Is" id="C8l-a7-Wgb"/>
                         <outlet property="groupNameTextField" destination="4Eo-KU-u6e" id="X5M-mB-bI1"/>
                     </connections>
                 </tableViewController>
@@ -204,10 +222,10 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                    <connections>
+                                        <action selector="isFavoriteButtonTapped:" destination="BnW-0r-PQp" eventType="touchUpInside" id="V61-lm-rzS"/>
+                                    </connections>
                                 </button>
-                                <connections>
-                                    <action selector="isFavoriteButtonTapped:" destination="BnW-0r-PQp" id="xiw-lJ-yRY"/>
-                                </connections>
                             </barButtonItem>
                             <barButtonItem style="plain" systemItem="save" id="B6M-j5-FhW">
                                 <connections>
@@ -218,7 +236,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="M56-Mb-M9S" id="BM6-k2-J9f"/>
-                        <outlet property="isFavoriteButton" destination="qRu-9T-8Z6" id="0aX-Tl-ctq"/>
+                        <outlet property="isFavoriteButton" destination="Z8Y-wf-JhS" id="4uy-71-ueM"/>
                         <outlet property="nameTextField" destination="aMc-22-tEp" id="bju-4v-cIT"/>
                     </connections>
                 </viewController>

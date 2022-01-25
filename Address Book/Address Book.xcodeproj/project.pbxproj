@@ -19,6 +19,7 @@
 		D22B1307279F651A004ECF75 /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B1306279F651A004ECF75 /* PersonTableViewController.swift */; };
 		D22B1309279F6523004ECF75 /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B1308279F6523004ECF75 /* GroupTableViewController.swift */; };
 		D22B130B279F6536004ECF75 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B130A279F6536004ECF75 /* DetailViewController.swift */; };
+		D2DD377A27A0975B00AA2A08 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD377927A0975B00AA2A08 /* PersonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D22B1306279F651A004ECF75 /* PersonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewController.swift; sourceTree = "<group>"; };
 		D22B1308279F6523004ECF75 /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
 		D22B130A279F6536004ECF75 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D2DD377927A0975B00AA2A08 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				D22B1306279F651A004ECF75 /* PersonTableViewController.swift */,
 				D22B1308279F6523004ECF75 /* GroupTableViewController.swift */,
 				D22B130A279F6536004ECF75 /* DetailViewController.swift */,
+				D2DD377927A0975B00AA2A08 /* PersonTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				D22B1307279F651A004ECF75 /* PersonTableViewController.swift in Sources */,
 				D22B1309279F6523004ECF75 /* GroupTableViewController.swift in Sources */,
 				D22B12FB279F63E4004ECF75 /* Group.swift in Sources */,
+				D2DD377A27A0975B00AA2A08 /* PersonTableViewCell.swift in Sources */,
 				D22B1305279F6503004ECF75 /* GroupController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

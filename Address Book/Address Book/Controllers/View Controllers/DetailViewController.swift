@@ -16,8 +16,9 @@ class DetailViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
-    @IBOutlet weak var isFavoriteButton: UIBarButtonItem!
+    @IBOutlet weak var isFavoriteButton: UIButton!
     
+    var isFavorite = false
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -47,21 +48,32 @@ class DetailViewController: UIViewController {
         }
         else {
             //Person doesn't exist, create
-            PersonController.createPerson(name: name, address: address, group: group)
+            PersonController.createPerson(name: name, address: address, group: group, isFavorite: self.isFavorite)
             self.navigationController?.popViewController(animated: true)
         }
     }
-    
+
     @IBAction func isFavoriteButtonTapped(_ sender: Any) {
-        guard let person = person else { return }
-        PersonController.toggleFavorite(person: person)
-        updateFavoriteButton()
+        if let person = person {
+            PersonController.toggleFavorite(person: person)
+            updateFavoriteButton()
+        } else {
+            isFavorite.toggle()
+            updateFavoriteButton()
+        }
     }
     
+    
     func updateFavoriteButton() {
-        guard let person = person else { return }
-        let favoriteImageName = person.isFavorite ? "star.fill" : "star"
-        let favoriteImage = UIImage(systemName: favoriteImageName)
-        isFavoriteButton.image = favoriteImage
+        //guard let person = person else { return }
+        if let person = person {
+            let favoriteImageName = person.isFavorite ? "star.fill" : "star"
+            let favoriteImage = UIImage(systemName: favoriteImageName)
+            isFavoriteButton.setImage(favoriteImage, for: .normal)
+        } else {
+            let favoriteImageName = isFavorite ? "star.fill" : "star"
+            let favoriteImage = UIImage(systemName: favoriteImageName)
+            isFavoriteButton.setImage(favoriteImage, for: .normal)
+        }
     }
 }

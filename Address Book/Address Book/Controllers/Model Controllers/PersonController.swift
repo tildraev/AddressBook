@@ -9,8 +9,8 @@ import Foundation
 
 class PersonController {
     // MARK: - CRUD Functions
-    static func createPerson(name: String = "New Contact", address: String = "", group: Group) {
-        let person = Person(name: name, address: address)
+    static func createPerson(name: String = "New Contact", address: String = "", group: Group, isFavorite: Bool = false) {
+        let person = Person(name: name, address: address, isFavorite: isFavorite)
         group.people.append(person)
         
         GroupController.sharedInstance.saveContactsToDisk()
