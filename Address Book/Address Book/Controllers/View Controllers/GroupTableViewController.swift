@@ -8,9 +8,7 @@
 import UIKit
 
 class GroupTableViewController: UITableViewController {
-    
-    // MARK: - IBOutlets
-    
+
     // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
