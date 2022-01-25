@@ -9,9 +9,17 @@ import UIKit
 
 class PersonTableViewController: UITableViewController {
 
+    // MARK: - Properties
+    var group: Group?
+    
+    // MARK: - IBOutlets
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: - IBActions
+    
 
     // MARK: - Table view data source
 
