@@ -11,6 +11,7 @@ class Person: Codable {
     let id: UUID
     var name: String
     var address: String
+    static var isFavorite: Bool = false
     
     init(id: UUID = UUID(), name: String, address: String) {
         self.id = id
