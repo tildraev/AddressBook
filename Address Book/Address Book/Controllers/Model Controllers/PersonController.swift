@@ -29,4 +29,8 @@ class PersonController {
         
         GroupController.sharedInstance.saveContactsToDisk()
     }
+    
+    static func toggleFavorite(person: Person) {
+        person.isFavorite.toggle()
+    }
 }
