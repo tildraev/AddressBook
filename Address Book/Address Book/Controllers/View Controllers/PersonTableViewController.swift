@@ -13,21 +13,31 @@ class PersonTableViewController: UITableViewController {
     var group: Group?
     
     // MARK: - IBOutlets
+    @IBOutlet weak var groupNameTextField: UITextField!
     
     // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        updateUI()
         tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        if let group = group,
+           let groupName = groupNameTextField.text {
+            group.name = groupName
+            GroupController.sharedInstance.saveContactsToDisk()
+        }
     }
     
-    // MARK: - IBActions
-    //Don't need?
-    
     // MARK: - Table view data source
+    
+    func updateUI() {
+        if let group = group {
+            groupNameTextField.text = group.name
+        }
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let group = group {
@@ -53,7 +63,7 @@ class PersonTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             if let group = group {
-                group.people.remove(at: indexPath.row)
+                PersonController.deletePerson(person: group.people[indexPath.row], group: group)
             }
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
